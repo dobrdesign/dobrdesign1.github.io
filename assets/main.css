@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Stinger;
+}
+@font-face {
+    font-family: 'Stinger';
+    src: local('font/Stinger Bold'), local('Stinger-Bold'),
+        url('font/Stinger-Bold.woff2') format('woff2'),
+        url('font/Stinger-Bold.woff') format('woff'),
+        url('font/Stinger-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Stinger-Regular';
+    src: local('font/Stinger Regular'), local('Stinger-Regular'),
+        url('font/Stinger-Regular.woff2') format('woff2'),
+        url('font/Stinger-Regular.woff') format('woff'),
+        url('font/Stinger-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.nav_nav
+{
+	font-size: 12px;
+	font-weight: 600;
+	color: #200952;
+	text-decoration: none;
+	align-items: center;
+    display: flex;
+    margin-left: 35px;
+    font-family: Open Sans, sans-serif;
+
+}
+
+.nav_nav:hover
+{
+	animation: bounce 1s;
+}
+
+/*@keyframes bounce {
+	0% {
+		transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}*/
+
+.nav_a
+{
+    display: flex;
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+    /*backdrop-filter: blur(7px);
+    background-color: #ffffff7a;*/
+}
+
+.nav-con1
+{
+	width: 100%;
+    z-index: 100;
+    position: absolute;
+}
+
+
+.nav-con
+{
+	width: 100%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+.nav-con-fixed {
+	position: fixed;
+	backdrop-filter: blur(10px);
+	background-color: #ffffff75;
+}
+
+.nav-con-btn
+{
+	padding-top: 13px;
+	padding-bottom: 13px;
+	margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-call-img
+{
+	max-width: 20px; 
+	position: absolute; 
+	margin-top: 13px;
+	margin-left: 13px;
+	transition: .3s ease-in-out;
+    animation: shake 5.8s infinite linear;
+    animation-iteration-count: infinite;
+}
+
+.nav-ico
+{
+    justify-content: flex-start;
+    display: flex;
+}
+
+.nav-ico:hover
+{
+    filter: brightness(1.2);
+}
+
+
+.section
+{
+	background: url(img/background.png) no-repeat;
+    background-size: cover;
+	background-color: #f4e7ff;
+	padding: 130px;
+	position: relative;
+	overflow: hidden;
+}
+
+.sec-text
+{
+	line-height: 1;
+	padding-top: 100px;
+	position: absolute;
+	color: #200952;
+	font-size: 65px;
+}
+
+.sec-desc p
+{
+	margin-top: 40px;
+	color: #200952;
+	font-size: 20px;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.sec-btn
+{
+	margin: 0;
+	padding: 26px 31px;
+	cursor:pointer;
+	display: inline;
+	font-size: 10px;
+	width: 50px;
+	height: 100px;
+	background-color: #200952;
+	border-radius: 30px;
+	transition: background 0.5s ease;
+	box-shadow: 1px 20px 99px 1px #1c1c1c78;
+}
+
+.sec-btn a
+{
+	color: #fff;
+	font-family: Open Sans, sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.sec-btn:hover
+{
+	background-color: #64ef8d;
+}
+
+.sec-btn path
+{
+	padding-top: 10px;
+}
+
+.sec-btn-img
+{
+	display: contents;
+}
+
+.sec-content
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.sec-dog
+{
+	z-index: 1;
+	max-height: 454px;
+	position: absolute;
+}
+
+.sec-volna
+{
+  	width:100%;
+  	position:absolute;
+  	bottom:0;
+  	overflow: hidden;
+  	left:0;
+}
+
+.wave
+{
+	background: url(https://static.tildacdn.com/tild3863-3134-4162-b932-303839333136/path.svg);
+	animation: wave 20s linear infinite;
+	fill: #fff;
+	z-index: 1;
+  	top: -198px;
+  	width: 6400px;
+  	margin-bottom: -30px;
+  	max-height: 100px;
+  	height: 135px;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+
+
+.text
+{
+	display: initial;
+	background-color: #81ffa6;
+	border-radius: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+.plate1
+{
+	margin-right: -75px;
+	max-width: 130px;
+	animation: anim-plate 3.8s infinite linear;
+}
+
+
+@keyframes anim-plate 
+{
+0% {transform:translateY(9px);animation-timing-function:ease-in-out;}
+50% {transform:translateY(-10px);}
+100% {transform:translateY(9px);}
+}
+
+.plate2
+{
+	max-width: 90px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 240px;
+    animation: anim-plate2 5s infinite linear;
+}
+
+@keyframes anim-plate2
+{
+0% {transform:translateY(12px);animation-timing-function:ease-in-out;}
+50% {transform:translateY(-14px);}
+100% {transform:translateY(11px);}
+}
+
+
+
+
+.sec-btn-img
+{
+	transition: .3s ease-in-out;
+    animation: 1200ms ease 0s normal none 1 running shake;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+
+    10% {
+        transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        -webkit-transform: rotateZ(-30deg);
+    }
+
+    20% {
+        transform: rotateZ(15deg);
+        -ms-transform: rotateZ(15deg);
+        -webkit-transform: rotateZ(15deg);
+    }
+
+    30% {
+        transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        -webkit-transform: rotateZ(-10deg);
+    }
+
+    40% {
+        transform: rotateZ(7.5deg);
+        -ms-transform: rotateZ(7.5deg);
+        -webkit-transform: rotateZ(7.5deg);
+    }
+
+    50% {
+        transform: rotateZ(-6deg);
+        -ms-transform: rotateZ(-6deg);
+        -webkit-transform: rotateZ(-6deg);
+    }
+
+    60% {
+        transform: rotateZ(5deg);
+        -ms-transform: rotateZ(5deg);
+        -webkit-transform: rotateZ(5deg);
+    }
+
+    70% {
+        transform: rotateZ(-4.28571deg);
+        -ms-transform: rotateZ(-4.28571deg);
+        -webkit-transform: rotateZ(-4.28571deg);
+    }
+
+    80% {
+        transform: rotateZ(3.75deg);
+        -ms-transform: rotateZ(3.75deg);
+        -webkit-transform: rotateZ(3.75deg);
+    }
+
+    90% {
+        transform: rotateZ(-3.33333deg);
+        -ms-transform: rotateZ(-3.33333deg);
+        -webkit-transform: rotateZ(-3.33333deg);
+    }
+
+
+    100% {
+        transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+    }
+}
+
+
+
+@keyframes shake {
+0% {transform:rotate(0deg);animation-timing-function:ease-in-out;}
+3% {transform:rotate(20deg);animation-timing-function:ease-in-out;}
+6% {transform:rotate(0deg);animation-timing-function:ease-in-out;}
+9% {transform:rotate(20deg);animation-timing-function:ease-in-out;}
+12% {transform:rotate(0deg);animation-timing-function:linear;}
+100% {transform:rotate(0deg);}
+}
+
+
+.service-con
+{
+	margin-left: auto;
+    margin-right: auto;
+    padding: 70px 140px;
+    font-size: 25px;
+    color: #200952;
+    width: 100%;
+    height: 100vh;
+}
+
+.cards
+{
+	padding: 30px 0;
+	display: flex;
+}
+
+.card1
+{
+	margin-right: 30px;
+    width: 100%;
+}
+
+.card1-info
+{
+	position: absolute;
+    padding: 40px;
+    font-size: 11px;
+    height: 605px;
+    width: 363px;
+}
+
+.card1-info-text
+{
+	padding-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.card-summ
+{
+	font-family: Open Sans, sans-serif;
+    width: 100%;
+    color: #200952;
+    font-size: 19px;
+    margin-top: 9px;
+}
+
+
+.card-sum
+{
+	font-family: Open Sans, sans-serif;
+    width: 100%;
+    color: #8877a0;
+    font-size: 12px;
+}
+
+.card-service
+{
+	padding: 50px 0 30px;
+}
+
+.card-chch
+{
+	padding-top: 20px;
+	display: flex;
+}
+
+.card-chch1
+{
+	padding-left: 10px;
+	font-weight: 400;
+	font-size: 15px;
+	font-family: Open Sans, sans-serif;
+}
+
+.card-btn
+{
+	margin: 0;
+	padding: 26px 31px;
+	display: flex;
+	width: 100%;
+	text-decoration: none;
+    color: #fff;
+    font-family: 'Open Sans';
+	background-color: #200952;
+	border-radius: 100px;
+	transition: background 0.5s ease;
+	justify-content: center;
+}
+
+.card-btn a
+{
+	color: #fff;
+	font-family: Open Sans, sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.card-btn:hover
+{
+	background-color: #64ef8d;
+}
+
+.rot
+{
+	float: right;
+	animation: rot 20s linear infinite;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card2
+{
+	margin-right: 30px;
+    width: 100%;
+}
+
+
+.info-con
+{
+	display: flex;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+
+.info-text
+{
+	position: absolute;
+    display: flex;
+    padding: 30px;
+    height: 145px;
+    align-items: center;
+}
+
+
+.info-img1
+{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+
+.dop-service-wave
+{
+  	width:100%;
+  	overflow: hidden;
+  	left:0;
+}
+
+.wave1
+{
+	background: url(https://static.tildacdn.com/tild3930-3130-4637-b063-373964353065/photo.svg);
+	animation: wave 20s linear infinite;
+	fill: #fff;
+	z-index: 1;
+  	top: -198px;
+  	width: 6400px;
+  	margin-bottom: -30px;
+  	max-height: 100px;
+  	height: 135px;
+}
+
+
+
+.dop-service
+{
+	background-color: #f8faff;
+    padding: 100px;
+    line-height: 50px;
+}
+
+.dop-service-figure
+{
+	display: flex;
+	padding-top: 100px;
+}
+
+
+
+.dop-service-con
+{
+	padding-top: 50px;
+	display: flex;
+}
+
+
+.dop-service-ico
+{
+	display: flex;
+    align-items: center;
+    position: absolute;
+    padding-top: 45px;
+    padding-left: 30px;
+}
+
+.dop-service-ico1
+{
+	display: flex;
+    align-items: center;
+    position: absolute;
+    padding-top: 45px;
+    padding-left: 30px;
+}
+
+
+.dop-service-text
+{
+	color: #200952;
+	padding-left: 10px;
+}
+
+
+
+.dop-service-text #desc
+{
+	font-weight: 300;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    line-height: 10px;
+}
+
+
+
+
+.booking-wave
+{
+  	width:100%;
+  	margin-top: -68px;
+  	bottom:0;
+  	overflow: hidden;
+  	left:0;
+}
+
+.wave2
+{
+	background: url(https://static.tildacdn.com/tild3863-3134-4162-b932-303839333136/path.svg);
+	animation: wave 20s linear infinite;
+	fill: #fff;
+	z-index: 1;
+  	top: -198px;
+  	width: 6400px;
+  	margin-bottom: -30px;
+  	max-height: 100px;
+  	height: 135px;
+}
+
+
+
+.booking-con
+{
+	padding: 100px;
+}
+
+
+.booking-card
+{
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	background: linear-gradient(-50deg, #FFC371 -10%, #FBDA61 110%);
+	border-radius: 50px;
+}
+
+.booking-txt
+{
+	color: #fff;
+	padding-bottom: 20px;
+}
+
+.booking-info
+{
+	display: flex;
+}
+
+.booking-info1
+{
+	display: flex;
+	color: #200952;
+	padding-bottom: 20px;
+	padding-right: 20px;
+}
+
+.booking-info2
+{
+	display: flex;
+	color: #200952;
+	padding-bottom: 20px;
+}
+
+
+.booking-info1-txt
+{
+	display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-left: 10px;
+}
+
+.booking-info1-txt h1
+{
+	font-size: 13px;
+	font-family: Open Sans, sans-serif;
+	font-weight: 400;
+}
+
+
+.booking-btn
+{
+	margin-top: 70px;
+	padding: 20px 31px;
+	width: 175px;
+	cursor:pointer;
+	font-size: 10px;
+	background-color: #200952;
+	border-radius: 50px;
+	transition: background 0.5s ease;
+	box-shadow: 1px 20px 99px 1px #1c1c1c78;
+}
+
+.booking-btn a
+{
+	color: #fff;
+	font-family: Open Sans, sans-serif;
+	font-weight: 300;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+
+.booking-btn:hover
+{
+	background-color: #64ef8d;
+}
+
+.gallery-con
+{
+	background-color: #f8faff;
+	padding: 100px;
+	color: #200952;
+}
+
+.gallery-txt
+{
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+}
+
+.gallery-txt img
+{
+	max-width: 75px;
+	position: absolute;
+	left: 60px;
+	margin-top: -110px;
+	animation: anim-ico 3.8s infinite linear;
+}
+
+
+@keyframes anim-ico
+{
+0% {transform:translateY(5px);animation-timing-function:ease-in-out;}
+50% {transform:translateY(-8px);}
+100% {transform:translateY(5px);}
+}
+
+.gallery-plate-txt
+{
+	color: #200952;
+    position: absolute;
+    display: flex;
+    padding-top: 33px;
+    padding-left: 30px;
+}
+
+.gallery-plate-txt h1 
+{
+	font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.gallery-info1
+{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 40px;
+}
+
+.gallery-photo1
+{
+	display: flex;
+	justify-content: center;
+	height: 310px;
+	padding-bottom: 40px;
+}
+
+.gallery-photo2
+{
+	display: flex;
+	justify-content: center;
+	height: 355px;
+	padding-bottom: 40px;
+}
+
+.gallery-photo3
+{
+	display: flex;
+	justify-content: center;
+	height: 300px;
+	padding-bottom: 40px;
+}
+
+.gallery-photo4
+{
+	display: flex;
+	justify-content: center;
+	height: 360px;
+	padding-bottom: 40px;
+}
+
+.gallery-photo5
+{
+	display: flex;
+	justify-content: center;
+	height: 530px;
+	padding-bottom: 40px;
+}
+
+.insta-con
+{
+	background: linear-gradient(-75deg, #7EAEFF -10%, #FCA6E9 110%);
+	padding-left: 100px;
+	display: flex;
+	height: 500px;
+}
+
+.insta-txt
+{
+	color: #fff;
+	font-size: 25px;
+	line-height: 1.4;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.insta-txt h1
+{
+	padding-bottom: 20px;
+}
+
+.insta-desc h1 
+{
+	color: #fff;
+	font-size: 15px;
+	font-weight: 300;
+	font-family: Open Sans, sans-serif;
+}
+
+
+.insta-btn
+{
+	margin-top: 50px;
+	padding: 20px 31px;
+	width: 181px;
+	cursor: pointer;
+	font-size: 10px;
+	background-color: #64ef8d;
+	border-radius: 50px;
+	box-shadow: 1px 20px 99px 1px #1c1c1c78;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-family: Open Sans, sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.insta-nya
+{
+	position: absolute;
+    margin-top: 30px;
+    left: 270px;
+}
+
+
+.insta-photo
+{
+	display: flex;
+	overflow: hidden;
+	width: 700px;
+	left: 300px;
+	position: relative;
+}
+
+.insta-photo1
+{
+	rotate: 10deg;
+	padding-left: 57px;
+	margin-top: -150px;
+}
+
+.insta-photo1 img 
+{
+	max-width: 150px;
+}
+
+.insta-photo2
+{
+	rotate: 10deg;
+	padding-left: 40px;
+	margin-top: -240px;
+}
+
+.insta-photo2 img 
+{
+	max-width: 150px;
+}
+
+.insta-photo3
+{
+	rotate: 10deg;
+	padding-left: 40px;
+	margin-top: -160px;
+}
+
+
+.insta-photo3 img 
+{
+	max-width: 150px;
+}
